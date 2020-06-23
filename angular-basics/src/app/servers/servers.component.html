@@ -17,6 +17,11 @@
   >
   Add Server
 </button>
-<p>{{ serverCreationStatus }}</p>
+<p *ngIf="serverCreated; else noServer">Server Was Created !! Server name is {{ serverName }}</p>
+<ng-template #noServer>
+  <p>
+    No Server Was Created
+  </p>
+</ng-template>
 <app-server></app-server>
 <app-server></app-server>
