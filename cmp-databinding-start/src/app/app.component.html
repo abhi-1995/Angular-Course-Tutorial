@@ -6,8 +6,12 @@
   <hr>
   <div class="row">
     <div class="col-xs-12">
-      <app-server-element *ngFor="let serverElement of serverElements"
-      [srvElement]="serverElement"></app-server-element>
+      <button class="btn btn-primary" (click)="onChangeFirst()">Change First Element</button>&nbsp;
+      <button class="btn btn-danger" (click)="onDestroyFirst()">On Destroy First</button>
+      <app-server-element
+        *ngFor="let serverElement of serverElements"
+      [srvElement]="serverElement"
+      [name]="serverElement.name"></app-server-element>
     </div>
   </div>
 </div>
